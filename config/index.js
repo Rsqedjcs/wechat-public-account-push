@@ -7,7 +7,7 @@ export const config = {
   APP_ID: "wx2fcd33473246566c",
 
   // 公众号APP_SECRET
-  APP_SECRET: "6c329303de9332ced75083751e27f453",
+  APP_SECRET: "b52419aea0328286f5cf73c78c360ff9",
 
   /**
    * 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如
@@ -31,7 +31,7 @@ export const config = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "osLtj6r3zm1d0AJ5vJTLWTWdX0xY",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "NAebNBZFWNTd3hoVgWKwGEWo0sQB2F8TNPeft8O_M7s",
+      useTemplateId: "KilqitP0b0WssFCN1lkExxfr7cikN3XmfX2xLKYESqw",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://space.bilibili.com/59320168?spm_id_from=333.1007.0.0"
     }
