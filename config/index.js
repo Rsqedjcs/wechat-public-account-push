@@ -31,7 +31,7 @@ export const config = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "osLtj6r3zm1d0AJ5vJTLWTWdX0xY",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "KilqitP0b0WssFCN1lkExxfr7cikN3XmfX2xLKYESqw",
+      useTemplateId: "DOj7RYFU9tyNq6O8mahJGF5Se_fptH_rJKYtcJPvcLA",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://space.bilibili.com/59320168?spm_id_from=333.1007.0.0"
     },
@@ -41,7 +41,7 @@ export const config = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "osLtj6j1HJzVuiUzOXv3GqbslW_U",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "KilqitP0b0WssFCN1lkExxfr7cikN3XmfX2xLKYESqw",
+      useTemplateId: "DOj7RYFU9tyNq6O8mahJGF5Se_fptH_rJKYtcJPvcLA",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://space.bilibili.com/59320168?spm_id_from=333.1007.0.0"
     }
@@ -84,10 +84,8 @@ export const config = {
    * 节日时，name填写相应展示的节日，你可以填“被搭讪纪念日”
    */
   FESTIVALS: [
-    {"type": "生日", "name": "老婆", "year": "1998", "date": "07-02"},
-    {"type": "节日", "name": "结婚纪念日", "year": "2020", "date": "09-03"},
-    {"type": "生日", "name": "李四", "year": "1996", "date": "09-31"},
-    {"type": "节日", "name": "被搭讪纪念日", "year": "2021", "date": "09-01"},
+    {"type": "节日", "name": "元旦", "year": "2023", "date": "01-01"},
+    {"type": "节日", "name": "国庆节", "year": "2022", "date": "10-01"},
   ],
 
   /**
@@ -95,7 +93,7 @@ export const config = {
    * 如果为3, 则仅展示“将要到达” 的3个重要节日提醒，剩下的将被忽略
    * 如果为0, 则默认展示全部
    */
-  FESTIVALS_LIMIT: 4,
+  FESTIVALS_LIMIT: 0,
 
   /** 日期相关 */
 
@@ -123,7 +121,7 @@ export const config = {
     * */
   SLOT_LIST: [
     // 这样配置的话，就会每次发送这句话
-    {"keyword": "note_cn", contents: "你主要的问题在于读书太少而想得太多"},
+    {"keyword": "note_cn", contents: "今天也是充满活力的一天"},
     // 这样配置的话，就会每次随机选一句话发送
     {"keyword": "note_en", contents: [
       "因为太喜欢你，所以看谁都像是情敌。",
