@@ -31,7 +31,7 @@ export const config = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "osLtj6r3zm1d0AJ5vJTLWTWdX0xY",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "DOj7RYFU9tyNq6O8mahJGF5Se_fptH_rJKYtcJPvcLA",
+      useTemplateId: "35O344FtFPLmwxTaam-9R1K6mEKaTf4E_njkFIljk2U",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://space.bilibili.com/59320168?spm_id_from=333.1007.0.0"
     },
@@ -41,7 +41,7 @@ export const config = {
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "osLtj6j1HJzVuiUzOXv3GqbslW_U",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "DOj7RYFU9tyNq6O8mahJGF5Se_fptH_rJKYtcJPvcLA",
+      useTemplateId: "35O344FtFPLmwxTaam-9R1K6mEKaTf4E_njkFIljk2U",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://space.bilibili.com/59320168?spm_id_from=333.1007.0.0"
     }
@@ -121,7 +121,7 @@ export const config = {
     * */
   SLOT_LIST: [
     // 这样配置的话，就会每次发送这句话
-    {"keyword": "note_cn", contents: "今天也是充满活力的一天"},
+    {"keyword": "note_final", contents: "今天也是充满活力的一天"},
     // 这样配置的话，就会每次随机选一句话发送
     {"keyword": "note_en", contents: [
       "因为太喜欢你，所以看谁都像是情敌。",
