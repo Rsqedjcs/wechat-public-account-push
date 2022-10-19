@@ -17,18 +17,18 @@ const main = async () => {
     const province = config.PROVINCE
     const city = config.CITY
     // 获取每日天气
-    const {
-        // 天气
-        weather,
-        // 最高温度
-        temp: maxTemperature, 
-        // 最低温度
-        tempn: minTemperature,
-        // 风向
-        wd: windDirection,
-        // 风力等级
-        ws: windScale
-    } = await getWeather(province, city)
+//     const {
+//         // 天气
+//         weather,
+//         // 最高温度
+//         temp: maxTemperature, 
+//         // 最低温度
+//         tempn: minTemperature,
+//         // 风向
+//         wd: windDirection,
+//         // 风力等级
+//         ws: windScale
+//     } = await getWeather(province, city)
     // 获取金山词霸每日一句
     const { content: noteEn, note: noteCh} = await getCIBA()
     // 获取每日一言
