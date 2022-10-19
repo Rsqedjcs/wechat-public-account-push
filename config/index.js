@@ -86,6 +86,8 @@ export const config = {
   FESTIVALS: [
     {"type": "节日", "name": "元旦", "year": "2023", "date": "01-01"},
     {"type": "节日", "name": "国庆节", "year": "2022", "date": "10-01"},
+    {"type": "生日", "name": "杨婷婷宝贝", "year": "2023", "date": "07-08"},
+    {"type": "生日", "name": "呆呆", "year": "2022", "date": "11-01"},
   ],
 
   /**
