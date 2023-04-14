@@ -76,6 +76,64 @@ export const getWeather = async (province, city) => {
   }
 }
 
+export const getWeather3 = async (province, city) => {
+  const info = {
+    weather:'',
+    temp:'',
+    tempn:'',
+    wd:'',
+    ws:''
+  }
+  if (!CITY_INFO[province] || !CITY_INFO[province][city] || !CITY_INFO[province][city]["AREAID"]) {
+    console.error('配置文件中找不到相应的省份或城市')
+    return info
+  }
+  const address = CITY_INFO[province][city]["AREAID"]
+  console.log(address)
+  // const address = '101281601'
+  const url = `https://devapi.qweather.com/v7/weather/3d?location=${address}&key=06ca730b8d3a4fd48d2761a2bd7a9890`
+
+  const res = await axios.get(url, {
+    headers: {
+      "Referer": `https://devapi.qweather.com/v7/weather/3d?location=${address}&key=06ca730b8d3a4fd48d2761a2bd7a9890`,
+      'User-Agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36`
+    }
+  }).catch(err => err)
+
+  try {
+    if (res.status === 200 && res.data) {
+      // console.log("接收数据res>>>>>>>>")
+      // console.log(res.data)
+      const weatherStr = JSON.stringify(res.data)
+      
+      // console.log(weatherStr)
+      // console.log("=========================")
+      const weather = JSON.parse(weatherStr)
+      if (weather.daily[0]) {
+        const tmp = weather.daily[0]
+        info.weather = tmp.textDay
+        info.temp = tmp.tempMax + "℃"
+        info.tempn = tmp.tempMin + "℃"
+        info.wd = tmp.windDirDay
+        info.ws = tmp.windScaleDay + "级"
+        console.log(info)
+        return info
+      }else{
+        console.log("返回数据错误")
+        return info
+      }
+    }
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      console.error('天气情况: 序列化错误', e)
+    } else {
+      console.error('天气情况: ', e)
+    }
+    return info
+  }
+  return info
+}
+
 /**
  * 金山词霸每日一句
  * @returns 
