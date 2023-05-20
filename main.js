@@ -59,8 +59,8 @@ const main = async () => {
         { name: toLowerLine('windDirection'), value: windDirection, color: getColor() },
         { name: toLowerLine('windScale'), value: windScale, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
-        { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
-        { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
+//         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
+//         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
         { name: toLowerLine('oneTalk'), value: oneTalk, color: getColor() },
         { name: toLowerLine('talkFrom'), value: talkFrom, color: getColor() },
     ].concat(dateDiffParams.concat(slotParams))
