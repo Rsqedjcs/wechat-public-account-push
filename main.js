@@ -35,12 +35,12 @@ const main = async () => {
     const { hitokoto: oneTalk, from: talkFrom} = await getOneTalk(config.LITERARY_PREFERENCE)
     // 统计日列表计算日期差
     const dateDiffParams = getDateDiffList().map(item => {
-        return { name: item.keyword, value: item.diffDay, color: getColor() }
+        return { name: item.keyword, value: item.diffDay}
     })
 
     // 获取插槽中的数据
     const slotParams = getSlotList().map(item => {
-        return { name: item.keyword, value: item.checkout, color: getColor() }
+        return { name: item.keyword, value: item.checkout}
     })
 
     // 获取生日信息
