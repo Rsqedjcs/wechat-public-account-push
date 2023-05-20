@@ -216,7 +216,7 @@ export const getBirthdayMessage = () => {
 
       // 存储数据
       if (message) {
-        resMessage += `${message} \n`
+        resMessage += `${message}\n`
       }
 
     }
