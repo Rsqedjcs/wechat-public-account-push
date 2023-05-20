@@ -45,24 +45,31 @@ const main = async () => {
 
     // 获取生日信息
     const birthdayMessage = getBirthdayMessage()
-
+    const birthdayMessagelist = birthdayMessage.split("\n")
+    const birthdayMessage0 = birthdayMessagelist[0]
+    const birthdayMessage1 = birthdayMessagelist[1]
+    const birthdayMessage2 = birthdayMessagelist[2]
+    const birthdayMessage3 = birthdayMessagelist[3]
 
     // 集成所需信息
     const week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     const wxTemplateParams = [
-        { name: toLowerLine('date'), value: `${selfDayjs().format('YYYY-MM-DD')} ${week_list[selfDayjs().format('d')]}`, color: getColor() },
-        { name: toLowerLine('province'), value: province, color: getColor() },
-        { name: toLowerLine('city'), value: city, color: getColor() },
-        { name: toLowerLine('weather'), value: weather, color: getColor() },
-        { name: toLowerLine('minTemperature'), value: minTemperature, color: getColor() },
-        { name: toLowerLine('maxTemperature'), value: maxTemperature, color: getColor() },
-        { name: toLowerLine('windDirection'), value: windDirection, color: getColor() },
-        { name: toLowerLine('windScale'), value: windScale, color: getColor() },
-        { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
-//         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
-//         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
-        { name: toLowerLine('oneTalk'), value: oneTalk, color: getColor() },
-        { name: toLowerLine('talkFrom'), value: talkFrom, color: getColor() },
+        { name: toLowerLine('date'), value: `${selfDayjs().format('YYYY-MM-DD')} ${week_list[selfDayjs().format('d')]}`},
+        { name: toLowerLine('province'), value: province},
+        { name: toLowerLine('city'), value: city},
+        { name: toLowerLine('weather'), value: weather},
+        { name: toLowerLine('minTemperature'), value: minTemperature},
+        { name: toLowerLine('maxTemperature'), value: maxTemperature},
+        { name: toLowerLine('windDirection'), value: windDirection},
+        { name: toLowerLine('windScale'), value: windScale},
+        { name: toLowerLine('birthdayMessage0'), value: birthdayMessage0},
+        { name: toLowerLine('birthdayMessage1'), value: birthdayMessage1},
+        { name: toLowerLine('birthdayMessage2'), value: birthdayMessage2},
+        { name: toLowerLine('birthdayMessage3'), value: birthdayMessage3},
+        // { name: toLowerLine('noteEn'), value: noteEn},
+        // { name: toLowerLine('noteCh'), value: noteCh},
+        { name: toLowerLine('oneTalk'), value: oneTalk},
+        { name: toLowerLine('talkFrom'), value: talkFrom},
     ].concat(dateDiffParams.concat(slotParams))
 
     // 公众号推送消息
@@ -79,13 +86,13 @@ const main = async () => {
     const postTimeZone = timeZone()
     const postTime = dayjs().format('YYYY-MM-DD HH:mm:ss')
     const callbackTemplateParams = [
-        { name: toLowerLine('postTimeZone'), value: postTimeZone, color: getColor() },
-        { name: toLowerLine('postTime'), value: postTime, color: getColor() },
-        { name: toLowerLine('needPostNum'), value: needPostNum, color: getColor() },
-        { name: toLowerLine('successPostNum'), value: successPostNum, color: getColor() },
-        { name: toLowerLine('failPostNum'), value: failPostNum, color: getColor() },
-        { name: toLowerLine('successPostIds'), value: successPostIds, color: getColor() },
-        { name: toLowerLine('failPostIds'), value: failPostIds, color: getColor() },
+        { name: toLowerLine('postTimeZone'), value: postTimeZone},
+        { name: toLowerLine('postTime'), value: postTime},
+        { name: toLowerLine('needPostNum'), value: needPostNum},
+        { name: toLowerLine('successPostNum'), value: successPostNum},
+        { name: toLowerLine('failPostNum'), value: failPostNum},
+        { name: toLowerLine('successPostIds'), value: successPostIds},
+        { name: toLowerLine('failPostIds'), value: failPostIds},
     ].concat(wxTemplateParams)
 
     const callbackTemplateId = config.CALLBACK_TEMPLATE_ID
